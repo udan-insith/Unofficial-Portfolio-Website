@@ -9,6 +9,7 @@
 
 .container {
     background-color: #111;
+    overflow: hidden;
 }
 
 .salute {
@@ -241,4 +242,37 @@
 
 .githubChart:hover .active:nth-child(2n) {
     background-color: #063f24;
+}
+
+@media screen and (max-width:1024px) {
+    .project {
+        flex-direction: column;
+    }
+    .project:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    .phone,
+    .laptop {
+        transform: none !important;
+    }
+
+    .githubChart {
+        display: none;
+    }
+}
+
+.githubTitle {
+    text-align: center;
+    font-size: 10vw;
+}
+
+.githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
 }
