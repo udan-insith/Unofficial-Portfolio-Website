@@ -1,4 +1,12 @@
 const boxContainer = document.querySelector(".boxContainer")
+const saluteTextContainer = document.querySelector(".saluteTextContainer")
+const saluteImgContainer = document.querySelector(".saluteImgContainer")
+const authorName = document.querySelector(".name")
+const jobTitleContainers = document.querySelectorAll(".jobTitleContainer")
+const jobTitles = document.querySelectorAll(".jobTitle")
+const projectTitle = document.querySelector(".projectTitle")
+
+
 
 
 for (let i = 0; i<365; i++) {
@@ -24,3 +32,15 @@ for (let i = 0; i<365; i++) {
 
     boxContainer.appendChild(el)
 }
+
+window.addEventListener("scroll", () => {
+    let offsetY = window.scrollY
+    saluteTextContainer.style.transform = `translateY(${offsetY * 0.1}px)`
+    saluteImgContainer.style.transform = `translate(${offsetY * 0.4}px, ${offsetY * 0.7}px)`
+    authorName.style.transform = `translateX(${offsetY * 0.1}px)`
+    jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.5}px`
+    jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`
+    jobTitles[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`
+    jobTitles[1].style.transform = `translateX(calc(300vh - ${offsetY}px))`
+    projectTitle.style.transform = `translateX(calc(400vh - ${offsetY}px))`
+})
