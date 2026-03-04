@@ -85,7 +85,7 @@
     display: flex;
     align-items: center;
     gap: 100px;
-    height: 140vh;
+    height: 150vh;
     overflow: hidden;
 }
 
@@ -172,6 +172,7 @@
     height: 379px;
     flex: 1;
     position: relative;
+
 }
 
 .laptopScreen {
@@ -192,7 +193,7 @@
 }
 
 .githubContainer {
-    height: 100vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -245,21 +246,42 @@
 }
 
 @media screen and (max-width:1024px) {
-    .project {
-        flex-direction: column;
-    }
-    .project:nth-child(2n) {
-        flex-direction: column;
-    }
 
-    .phone,
-    .laptop {
-        transform: none !important;
-    }
+  .projects{
+    padding: 0 30px;
+    text-align: center;
+  }
 
-    .githubChart {
-        display: none;
-    }
+  .project{
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n){
+    flex-direction: column;
+  }
+
+  .phone,.laptop{
+    transform: none !important;
+  }
+  
+  .githubChart{
+    display: none;
+  }
+
+  .githubTitle{
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .githubSm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color:#555;
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 .githubTitle {
@@ -268,11 +290,15 @@
 }
 
 .githubSm {
-    display: flex;
+    display:none;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    color: #555;
+    color: #23005a;
     font-size: 30px;
     text-align: center;
+    background-color: #c5acff;
+    padding: 20px 10px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #fff;
 }
