@@ -189,3 +189,33 @@
 .laptopScreen::-webkit-scrollbar {
     display: none;
 }
+
+.githubContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.githubTitle {
+    font-size: 100px;
+    color: #333;
+}
+
+.githubChart {
+    width: 820px;
+}
+
+.dates {
+    padding: 10px;
+    color: #555;
+    font-size: 12px;
+}
+
+.box {
+    width: 15px;
+    height: 15px;
+    background-color: #17;
+    cursor: pointer;
+}
