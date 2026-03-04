@@ -67,3 +67,47 @@
     line-height: 100vh;
     cursor: default;
 }
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+    padding: 0px 100px;
+}
+
+.projectTitle {
+    font-size: 10vw;
+    color: #333;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.phone {
+    width: 300px;
+    height: 600px;
+    position: relative;
+}
+
+.phoneScreen {
+    width: 264px;
+    height: 567px;
+    position: absolute;
+    top: 17px;
+    left: 18px;
+    border-radius: 24px;
+    overflow: scroll;
+}
+
+.phoneScreen::-webkit-scrollbar {
+    display: none;
+}
+
+.phoneApp {
+    width: 100%;
+}
